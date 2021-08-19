@@ -18,7 +18,7 @@ uint32_t currentTimeStamp()
     #endif
 }
 
-void digitalsInput(inputs_t *inputs) 
+void digitalsInput(digitalInput_t *inputs) 
 {
     for (int i = 0; i < INPUT_COUNT; i++)
     {
@@ -32,11 +32,11 @@ void digitalsInput(inputs_t *inputs)
         }
         if((now - inputs[i].lastPressed) > debounceDelay)
         {
-            if(inputs[i].lastPinState == (LOW ^ inputs[i].level) && inputs[i].pinState == (HIGH ^ inputs[i].level))
+            if(inputs[i].lastPinState == (false ^ inputs[i].level) && inputs[i].pinState == (true ^ inputs[i].level))
             {
                 inputs[i].pressed = true;
             }
-            if(inputs[i].lastPinState == (HIGH ^ inputs[i].level) && inputs[i].pinState == (LOW ^ inputs[i].level))
+            if(inputs[i].lastPinState == (true ^ inputs[i].level) && inputs[i].pinState == (false ^ inputs[i].level))
             {
                 inputs[i].pressed = false;
                 longPressDisable = false;
