@@ -18,7 +18,7 @@ uint32_t currentTimeStamp()
     #endif
 }
 
-void digitalsInput(digitalInput_t *inputs) 
+void digitalInput(digitalInput_t *inputs) 
 {
     for (int i = 0; i < INPUT_COUNT; i++)
     {

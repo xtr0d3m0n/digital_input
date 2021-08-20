@@ -6,6 +6,9 @@
 
 #define FRAMEWORK_ARDUINO /* define the used framework */
 //#define FRAMEWORK_STM32CUBE_HAL
+#ifdef FRAMEWORK_ARDUINO
+#include <Arduino.h> 
+#endif
 
 typedef struct
 {
