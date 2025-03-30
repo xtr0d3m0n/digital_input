@@ -1,4 +1,4 @@
-# digital_input
+# Digital Inputs
 C library for digital inputs(buttons, switches)
 
 A Lightweight C based library for be used with arduino Stm32CubeHAL or any other framework that support a milisecond time stamp.
